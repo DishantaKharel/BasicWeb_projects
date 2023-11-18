@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai World</title>
+    <!-- CSS for navbar and footer  -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <!-- CSS for blog page -->
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .head {
+            display: block;
+            margin-top: 85px;
+            color: #363640;
+            padding-left: 50px;
+        }
+
+        .head h1 {
+            font-size: 50px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .container {
+            padding-left: 120px;
+            margin-top: 110px;
+            height: 100%;
+            display: block;
+        }
+
+        .blog1, .blog2, .blog3 {
+            display: flex;
+            width: 955px;
+            margin-bottom: 50px;
+            background-color: rgb(245, 245, 245);
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .container .blogimg {
+            flex: 40%;
+        }
+
+        .container .blogtext {
+            flex: 60%;
+        }
+
+        .container h2 {
+            font-size: 30px;
+            color: #575757;
+            padding: 95px 0px 10px 20px;
+        }
+
+        .container h4 {
+            padding-left: 20px;
+            color: #575757;
+            line-height: 22px;
+        }
+
+        .container .button {
+            margin-left: 20px;
+            margin-top: 30px;
+            color: #ffffff;
+            background-color: #70cf84;
+            border-radius: 15px;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .trendnews {
+            width: 320px;
+            border: 1px solid;
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.4);
+            height: 492px;
+            margin-left: 100px;
+        }
+
+        .trendnews h2 {
+            text-align: center;
+            margin-left: 10px;
+            margin-bottom: 25px;
+        }
+
+        .trendnews .image,
+        .ntext {
+            padding-left: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation bar section  -->
+    <nav>
+        <a href="home.html"><img src="Image\logo.jpg" alt="logo" style="height:60px" class="logo"></a>
+        <ul class="navitem">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="research.html">Research</a>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="head">
+        <h1>Latest Blogs</h1>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="blog1">
+                <div class="blogimg">
+                    <img src="Image\tech.jpg" style="width:400px;" height="375px" alt="technology">
+                </div>
+                <div class="blogtext">
+                    <h2>Technology in life</h2>
+                    <h4>Technology can be termed as the application of scientific knowledge for practical purpose. Every machine today that we are surrounded by is an example of technology. It is the tools, methods, and systems that are developed and used to improve and simplify daily life. This includes the creation and use of devices, software, and systems in a variety of fields including information technology...</h4>
+                    <a href="blogtechnology.html"><input type="button" value="Read More" class="button"></a>
+                </div>
+            </div>
+            <div class="blog2">
+                <div class="blogtext">
+                    <h2>Islington</h2>
+                    <h4>Islington College is a renowned educational institution located in Kathmandu, Nepal. It is a London Metropolitan University Degree which is a private college, established with the aim of providing quality education, and has a strong focus on student development and employability. The college is equipped with state-of-the-art facilities and resources to support student learning and development...
+                    </h4>
+                    <a href="#"><input type="button" value="Read More" class="button"></a>
+                </div>
+                <div class="blogimg">
+                    <img src="Image\islington.png" style="width:400px;" height="375px" alt="Egg">
+                </div>
+            </div>
+            <div class="blog3">
+                <div class="blogimg">
+                    <img src="Image\messi.jpg" style="width:400px;" height="375px" alt="G.O.A.T">
+                </div>
+                <div class="blogtext">
+                    <h2>Winner of the world cup</h2>
+                    <h4>World cup which was held in 2022 in Qatar was one of the biggest World cups that could happen in planet Earth. This World cup was the last World cup for many of the greatest football players like Ronaldo, Messi, Suarez, Cavani etc. Each team was capable of wining the trophy among them the most supported team was Argentina, Brazil, and Portugal. At the end Argentina was the one who won the World cup....
+                    </h4>
+                    <a href="#"><input type="button" value="Read More" class="button"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="trendnews">
+            <h2>Trending news</h2>
+            <div class="news" style="display: flex; margin-bottom: 40px; cursor: pointer;">
+                <div class="image">
+                    <img src="Image\elon.jpg" style="width: 60px; height: 60px;">
+                </div>
+                <div class="ntext" style="padding-top: 10px;">
+                    <h5> Elon musk becomes the CEO of twitter and has loss up to 100 billion dollar.</h5>
+                </div>
+            </div>
+            <div class="news" style="display: flex; padding-bottom: 40px; cursor: pointer;">
+                <div class="image">
+                    <img src="Image\prachanda.jpg" style="width: 60px; height: 60px;">
+                </div>
+                <div class="ntext" style="padding-top: 10px;">
+                    <h5> Puspa kamal Dahal aka Prachanda is appointed again as the PM of Nepal.</h5>
+                </div>
+            </div>
+            <div class="news" style="display: flex; padding-bottom: 40px; cursor: pointer;">
+                <div class="image">
+                    <img src="Image\drs.jpg" style="width: 60px; height: 60px;">
+                </div>
+                <div class="ntext" style="padding-top: 10px;">
+                    <h5> DRS became the first ever Nepali team to acquire second position in PMGC.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footerlogo">
+                <img src="Image\logo.jpg" alt="logo" style="width:200px; height:100px;">
+            </div>
+            <div class="smedia">
+                <h3>Social medias</h3>
+                <a href="login.html"> <img src="Image\facebook.png" style="height: 40px;" alt="facebook_logo"></a>
+                <a href="login.html"> <img src="Image\insta.png" alt="instagram_logo" style="height: 40px;"></a>
+                <a href="login.html"> <img src="Image\twitter.png" alt="twitter_logo" style="height: 40px;"></a>
+                <a href="login.html"><img src="Image\telegram.png" alt="telegram_logo" style="height: 40px;"></a>
+            </div>
+            <div class="ulinks">
+                <h3>Useful links</h3>
+                <a href="home.html">Home</a>
+                <a href="blog.html">Blogs</a>
+                <a href="product.html">Products</a>
+                <a href="research.html">Research</a>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="location">
+                <h3>Address</h3>
+                <h5>Nepal,Kathmandu<br>Kamal pokhari</h4>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

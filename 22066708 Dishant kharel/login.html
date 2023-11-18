@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai World</title>
+    <style>
+        .bigbox {
+            display: flex;
+            background-color: silver;
+            align-items: center;
+            width: 550px;
+            position: relative;
+            left: 450px;
+            top: 200px;
+            border-radius: 32px;
+        }
+
+        img {
+            border-radius: 30px;
+        }
+
+        input,
+        select {
+            position: relative;
+            left: 50px;
+            width: 100%;
+            padding: 7px 2px;
+            /* removes the white background of the input box */
+            background: transparent;
+            /*removes the box which appears while clicking input box*/
+            outline: none;
+            border: none;
+            /* straight line at the bottom */
+            border-bottom: 1px solid;
+        }
+
+        .end {
+            position: relative;
+            top: 30px;
+            left: 140px;
+            border: 0px;
+            color: white;
+            background: #03a9f4;
+            cursor: pointer;
+            border-radius: 10px;
+            height: 31px;
+            width: 60px;
+        }
+        .formbox table{
+            margin-left: 10px;
+        }
+
+        .back img {
+            position: absolute;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bigbox" id="hide">
+        <img src="Image\Loginpage.jpg" style="height: 330px" alt="bonsai plant">
+        <div class="formbox">
+            <form name="loginForm">
+                <table>
+                    <tr>
+                        <td class="text">First Name</td>
+                        <td><input type="text" id="fname" placeholder="Your name" required></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Last Name</td>
+                        <td><input type="text" id="lname" required></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Country</td>
+                        <td><select id="dropdown" required>
+                                <option selected disabled>Choose</option>
+                                <option>Bangladesh</option>
+                                <option>Bhutan</option>
+                                <option>China</option>
+                                <option>India</option>
+                                <option>Japan</option>
+                                <option>Nepal</option>
+                                <option>Pakistan</option>
+                            </select> </td>
+                    </tr>
+                    <tr>
+                        <td class="text">Phone num</td>
+                        <td><input type="number" id="num" required></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Email</td>
+                        <td><input type="email" id="email" placeholder="example@gmail.com" required> </td>
+                    </tr>
+                    <tr>
+                        <td class="text">Password</td>
+                        <td><input type="password" id="psw" required> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" onclick="goo()" value="Submit" class="end"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+
+
+        function goo() {
+            var a = document.getElementById('fname').value;                     //stores the value from respective id
+            var b = document.getElementById('lname').value;
+            var d = document.getElementById('num').value;
+            var e = document.getElementById('email').value;
+            var f = document.getElementById('psw').value;
+
+            if(a.toString().length ==0 || b.toString().length ==0 || d.toString().length ==0 || e.toString().length ==0 || f.toString().length ==0)
+            {
+                alert("Form is not completely filled");
+            }
+
+            else if (d.toString().length > 10 || d.toString().length < 10) {
+                alert("Invalid phone number");
+            }
+            else if (f.toString().length < 8 || f.toString().length > 18) {
+                alert("Invalid length of password");
+            }
+
+            else {
+                var ind = document.getElementById('hide');
+                ind.style.backgroundColor = "white";
+                ind.innerHTML = "<h1>Thank you for your response!!</h1>";
+
+                setTimeout(() => {
+                    window.open("home.html", "_self")
+                }, 3000);
+            }
+        }
+    </script>
+
+    <!-- Cross image -->
+    <section class="back"><a href="home.html"><img src="Image\cross.png"></a></section>
+
+</body>
+
+</html>

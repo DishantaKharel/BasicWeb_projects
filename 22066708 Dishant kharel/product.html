@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai World</title>
+    <!-- CSS for navbar and footer  -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- Javascript for Categories -->
+    <script src="product.js"></script>
+
+    <!-- CSS for product page -->
+    <style type="text/css">
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .catleft {
+            padding-top: 60px;
+            padding-left: 30px;
+        }
+
+        .catleft .listcat button {
+            display: block;
+            color: white;
+            background-color: #70cf84;
+            width: 195px;
+            height: 45px;
+            border: 1px solid black;
+            font-size: 20px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+
+        .catright {
+            margin-top: 105px;
+            margin-left: 106px;
+            display: block;
+        }
+
+        .bonsaiimg {
+            margin-right: 80px;
+            width: 315px;
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+
+        .imgdtl {
+            padding-left: 30px;
+            padding-bottom: 10px;
+            padding-top: 15px;
+        }
+
+        .catright button {
+            background-color: #70cf84;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            margin-left: 200px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+
+        .catright img {
+            padding-left: 55px;
+        }
+
+        .catright .row {
+            display: flex;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar section  -->
+    <nav>
+        <a href="home.html"><img src="Image\logo.jpg" alt="logo" style="height:60px" class="logo"></a>
+        <ul class="navitem">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="research.html">Research</a>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <div class="catleft">
+            <div class="headcat" style="padding-bottom: 30px;">
+                <h2>Categories</h2>
+            </div>
+            <div class="listcat">
+                <button onclick="complete_set()" id="1">All</button>
+                <button onclick="offer()" id="2">Offers</button>
+                <button onclick="bsell()" id="3">Best Selling</button>
+                <button onclick="regular()" id="4">Regular</button>
+            </div>
+        </div>
+
+
+        <div class="catright">
+            <div class="row" id="off">
+                <div class="bonsaiimg">
+                    <a href="producting.html"><img src="apple.jpg" alt="bonsai"></a>
+                    <div class="imgdtl">
+                        <h3><b>Apple Bonsai </b></h3><br>
+                        <h2>$25</h2><del>
+                            <h3>$40</h3>
+                        </del><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>    
+                </div>
+                <div class="bonsaiimg">
+                    <img src="apricot.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Apricot Bonsai</b></h3><br>
+                        <h2>$50</h2><del>
+                            <h3>$100</h3>
+                        </del><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="azalea.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Azalea Bonsai</b></h3><br>
+                        <h2>$150</h2><del>
+                            <h3>$200</h3>
+                        </del><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="best">
+                <div class="bonsaiimg">
+                    <img src="chinesepepper.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Chinese Pepper Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="chineseprivet.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Chinese Privet Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="dawnredwood.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Dawnredwood Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="best_1">
+                <div class="bonsaiimg">
+                    <img src="elm.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Elm Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="ficus.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Ficus Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="firethorn.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Firethorn Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="reg">
+                <div class="bonsaiimg">
+                    <img src="japanesemaple.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Japanese Maple Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="juniper.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Juniper Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="larch.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Larch Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="reg_1">
+                <div class="bonsaiimg">
+                    <img src="lindenbonsai.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Linden Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="maple.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Maple Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="olive.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Olive Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="reg_2">
+                <div class="bonsaiimg">
+                    <img src="podocarpus.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Podocarpus Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="serissa.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>Serissa Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+                <div class="bonsaiimg">
+                    <img src="whitepine.jpg" alt="bonsai">
+                    <div class="imgdtl">
+                        <h3><b>White Pine Bonsai</b></h3><br>
+                        <h2>$50</h2><br>
+                        <button onclick="popup()">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footerlogo">
+                <img src="Image\logo.jpg" alt="logo" style="width:200px; height:100px;">
+            </div>
+            <div class="smedia">
+                <h3>Social medias</h3>
+                <a href="login.html"> <img src="Image\facebook.png" style="height: 40px;" alt="facebook_logo"></a>
+                <a href="login.html"> <img src="Image\insta.png" alt="instagram_logo" style="height: 40px;"></a>
+                <a href="login.html"> <img src="Image\twitter.png" alt="twitter_logo" style="height: 40px;"></a>
+                <a href="login.html"><img src="Image\telegram.png" alt="telegram_logo" style="height: 40px;"></a>
+            </div>
+            <div class="ulinks">
+                <h3>Useful links</h3>
+                <a href="home.html">Home</a>
+                <a href="blog.html">Blogs</a>
+                <a href="product.html">Products</a>
+                <a href="research.html">Research</a>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="location">
+                <h3>Address</h3>
+                <h5>Nepal,Kathmandu<br>Kamal pokhari</h4>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

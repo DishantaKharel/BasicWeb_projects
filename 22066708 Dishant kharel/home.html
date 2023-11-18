@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scalse=1.0">
+    <title>Bonsai World</title>
+    <!-- CSS for navbar and footer  -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <!-- CSS for home page -->
+    <style type="text/css">
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .animation {
+            color: #857e7b;
+            height: 250px;
+            display: block;
+            margin-top: 110px;
+            margin-bottom: 125px;
+        }
+
+        .animation h1 {
+            /* Allows the object moves in the directed direction  */
+            position: absolute;
+            font-size: 100px;
+            left: 30px;
+        }
+
+        .animation h3 {
+            position: absolute;
+            font-size: 30px;
+            left: 448px;
+            top: 300px;
+        }
+
+        .animation h2 {
+            position: absolute;
+            font-size: 50px;
+            left: 500px;
+            top: 360px;
+        }
+
+        /* animation for 'welcome' */
+        @keyframes leftToright1 {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 30px;
+            }
+        }
+
+        /* animation for 'to'  */
+        @keyframes leftToright3 {
+            from {
+                top: 135px;
+            }
+
+            to {
+                top: 300px;
+            }
+        }
+
+        /* animation for 'bonsai world' */
+        @keyframes leftToright2 {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 500px;
+            }
+        }
+
+        .animation h1 {
+            animation-name: leftToright1;
+            /* Time for the animation to complete */
+            animation-duration: 2s;
+        }
+
+        .animation h3 {
+            animation-name: leftToright3;
+            animation-duration: 1.25s;
+        }
+
+        .animation h2 {
+            animation-name: leftToright2;
+            animation-duration: 1s;
+        }
+
+        .why {
+            border-radius: 1px solid;
+            box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.4);
+            margin-bottom: 100px;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-bottom: 80px;
+        }
+
+        .why_btn button {
+            color: #ffffff;
+            background-color: #70cf84;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            right: 75px;
+            top: 655px;
+            cursor: pointer;
+        }
+
+        .head_s {
+            margin-left: 650px;
+            margin-bottom: 70px;
+        }
+
+        .slideshow {
+            display: flex;
+            margin-left: 325px;
+            /* Space between the different div  */
+            gap: 110px;
+            margin-bottom: 130px;
+        }
+
+        .hd_blg {
+            padding-left: 290px;
+            margin-top: 100px;
+            margin-bottom: 200px;
+        }
+
+        .hd_blg a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .hd_blg h1 {
+            margin-left: 400px;
+            margin-bottom: 50px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .all_blg {
+            display: flex;
+            width: 955px;
+            margin-bottom: 50px;
+            background-color: rgb(245, 245, 245);
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .all_blg .blogimg {
+            flex: 40%;
+        }
+
+        .all_blg .blogtext {
+            flex: 60%;
+        }
+
+        .all_blg h2 {
+            font-size: 30px;
+            color: #575757;
+            padding: 95px 0px 10px 20px;
+        }
+
+        .all_blg h4 {
+            padding-left: 20px;
+            color: #575757;
+            line-height: 22px;
+        }
+
+        .all_blg .button {
+            margin-left: 20px;
+            margin-top: 30px;
+            color: #ffffff;
+            background-color: #70cf84;
+            border-radius: 15px;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comments {
+            /* Occupies the whole line  */
+            display: block;
+            background-color: rgb(245, 245, 245);
+            ;
+            width: 580px;
+            margin-left: 30%;
+            border: 1px solid;
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .comments .numcmnt h1 {
+            padding-left: 15px;
+            padding-bottom: 20px;
+            display: block;
+
+        }
+
+        .comments .fcmnt {
+            display: block;
+        }
+
+        .comments .fcmnt_head {
+            /* Occupies only needed space  */
+            display: flex;
+            padding-left: 35px;
+        }
+
+        .comments .fcmnt_head h2 {
+            font-size: 20px;
+            padding-top: 24px;
+            padding-left: 20px;
+            padding-right: 90px;
+        }
+
+        .comments .fcmnt_head h4 {
+            padding-top: 24px;
+            margin-left: 30px;
+        }
+
+        .comments .fcmnt_body {
+            padding-left: 85px;
+            margin-left: 32px;
+            margin-right: 30px;
+            font-family: 'Arial Narrow', 'Arial', 'sans-serif';
+        }
+
+        .comments .formcmnt .addcmnt {
+            padding-left: 15px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            font-family: 'Trebuchet MS', 'sans-serif';
+        }
+
+        .comments .formcmnt .usercmnt {
+            padding-left: 50px;
+        }
+
+        .formcmnt .button {
+            cursor: pointer;
+            color: #ffffff;
+            background-color: #70cf84;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            left: 444px;
+            top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar section  -->
+    <nav>
+        <a href="home.html"><img src="Image\logo.jpg" alt="logo" style="height:60px" class="logo"></a>
+        <ul class="navitem">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="research.html">Research</a>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="animation">
+        <h1>Welcome</h1><br>
+        <h3>To</h3><br>
+        <h2>Bonsai World</h2><br>
+    </div>
+
+    <div class="why">
+        <h3>
+            <p>In a leading competition of the e-commerce website espically after the online marketing boom due to
+                covid why the customer should choose us and what makes us different than others?</p>
+        </h3><br>
+        Most of the online shopping website nowadays are espicially B2B services, whereas we are here by bringing
+        B2C service and so we provide the better services to our costumer and costumer satisfaction is our prime
+        responsibility. we have high experience of selling bonsai plants through our offline services and now we are
+        here to crash the online market too.At our e-commerce store, we pride ourselves on offering top-quality
+        products at unbeatable prices. We have a wide selection of items to choose from and our team is dedicated to
+        providing exceptional customer service. We also offer fast and free shipping on all orders, as well as easy
+        returns and exchanges.<br>
+
+        <div class="why_btn">
+            <a href="product.html"><button>Shop now</button></a>
+        </div>
+
+    </div>
+
+    <!-- Images section  -->
+    <div class="head_s">
+        <h1> Our Products</h1>
+    </div>
+    <div class="slideshow">
+
+        <a href="product.html">
+            <div id="img1">
+                <img src="apple.jpg">
+            </div>
+        </a>
+        <a href="product.html">
+            <div id="img2">
+                <img src="apricot.jpg">
+            </div>
+        </a>
+        <a href="product.html">
+            <div id="img3">
+                <img src="azalea.jpg">
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Javascript for image slideshow -->
+    <script>
+
+        var bonsaiimg1 = ['apricot.jpg', 'azalea.jpg', 'chinesepepper.jpg', 'chineseprivet.jpg', 'dawnredwood.jpg', 'elm.jpg', 'ficus.jpg', 'apple.jpg'];
+
+        var x = 0;
+        var imgs1 = document.getElementById('img1');
+
+        setInterval(slider1, 2000);                 //Calls functions at the time interval given (in milliseconds)
+
+        function slider1() {
+            if (x < bonsaiimg1.length) {
+                x = x + 1;
+            }
+
+            else {
+                x = 1;
+            }
+
+            imgs1.innerHTML = "<img src=" + bonsaiimg1[x - 1] + ">";          // Prints the images in the page
+        }
+
+        var bonsaiimg2 = ['azalea.jpg', 'chinesepepper.jpg', 'chineseprivet.jpg', 'dawnredwood.jpg', 'elm.jpg', 'ficus.jpg', 'apple.jpg', 'apricot.jpg'];
+
+        var y = 0;
+        var imgs2 = document.getElementById('img2');
+
+        setInterval(slider2, 2000);
+
+        function slider2() {
+            if (y < bonsaiimg2.length) {
+                y = y + 1;
+            }
+
+            else {
+                y = 1;
+            }
+
+            imgs2.innerHTML = "<img src=" + bonsaiimg2[y - 1] + ">";
+        }
+
+        var bonsaiimg3 = ['chinesepepper.jpg', 'chineseprivet.jpg', 'dawnredwood.jpg', 'elm.jpg', 'ficus.jpg', 'apple.jpg', 'apricot.jpg', 'azalea.jpg'];
+
+        var z = 0;
+        var imgs3 = document.getElementById('img3');
+
+        setInterval(slider3, 2000);
+
+        function slider3() {
+            if (z < bonsaiimg3.length) {
+                z = z + 1;
+            }
+
+            else {
+                z = 1;
+            }
+
+            imgs3.innerHTML = "<img src=" + bonsaiimg3[z - 1] + ">";
+        }
+
+    </script>
+
+    <!-- Blogs -->
+    <div class="hd_blg">
+        <a href="blog.html">
+            <h1>Blogs</h1>
+        </a>
+        <div class="all_blg">
+            <div class="blogimg">
+                <img src="Image\tech.jpg" style="width:400px;" height="375px" alt="technology">
+            </div>
+            <div class="blogtext">
+                <h2>Technology in life</h2>
+                <h4>Technology can be termed as the application of scientific knowledge for practical purpose. Every machine today that we are surrounded by is an example of technology. It is the tools, methods, and systems that are developed and used to improve and simplify daily life. This includes the creation and use of devices, software, and systems in a variety of fields including information technology...</h4>
+                <a href="#"><input type="button" value="Read More" class="button"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment section -->
+    <div class="comments">
+        <div class="numcmnt">
+            <h1>1 Comment</h1>
+        </div>
+        <div class="fcmnt">
+            <div class="fcmnt_head">
+                <img src="Image\person1.png" alt="photo">
+                <h2>Alexandro Lampon</h2>
+                <h4>15:32</h4>
+            </div>
+            <div class="fcmnt_body">
+                <h4>Love the products. Loved the hospitality, we will be looking forward for a good partnership with
+                    you. </h>
+            </div>
+        </div>
+        <div class="formcmnt">
+            <div class="addcmnt">
+                <h2>Leave a comment</h2>
+                <hr>
+            </div>
+            <div class="usercmnt">
+                <textarea style="resize:none; outline: none;" cols="60" rows="6" placeholder="Add a comment"></textarea>
+            </div>
+            <div>
+                <a href="home.html"><input class="button" type="button" value="Submit"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footerlogo">
+                <img src="Image\logo.jpg" alt="logo" style="width:200px; height:100px;">
+            </div>
+            <div class="smedia">
+                <h3>Social medias</h3>
+                <a href="login.html"> <img src="Image\facebook.png" style="height: 40px;" alt="facebook_logo"></a>
+                <a href="login.html"> <img src="Image\insta.png" alt="instagram_logo" style="height: 40px;"></a>
+                <a href="login.html"> <img src="Image\twitter.png" alt="twitter_logo" style="height: 40px;"></a>
+                <a href="login.html"><img src="Image\telegram.png" alt="telegram_logo" style="height: 40px;"></a>
+            </div>
+            <div class="ulinks">
+                <h3>Useful links</h3>
+                <a href="home.html">Home</a>
+                <a href="blog.html">Blogs</a>
+                <a href="product.html">Products</a>
+                <a href="research.html">Research</a>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="location">
+                <h3>Address</h3>
+                <h5>Nepal,Kathmandu<br>Kamal pokhari</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
